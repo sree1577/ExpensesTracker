@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #1f1f1f;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.income {
+  color: #00e676;
+  font-weight: bold;
+}
+
+.expense {
+  color: #ff5252;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #ff1744;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

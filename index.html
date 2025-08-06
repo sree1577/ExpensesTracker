@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker 💸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>💸 Expense Tracker</h1>
+
+  <div class="container">
+    <form id="transaction-form">
+      <div>
+        <label for="description">🔤 Title</label>
+        <input type="text" id="description" placeholder="e.g., Grocery" required />
+      </div>
+      <div>
+        <label for="amount">💰 Amount</label>
+        <input type="number" id="amount" placeholder="e.g., 100" required />
+      </div>
+      <div>
+        <label for="category">📂 Category</label>
+        <select id="category" required>
+          <option value="" disabled selected>Select</option>
+          <option value="Food">🍔 Food</option>
+          <option value="Travel">🚗 Travel</option>
+          <option value="Rent">🏠 Rent</option>
+          <option value="Salary">💼 Salary</option>
+          <option value="Bills">💡 Bills</option>
+          <option value="Other">🔧 Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="date">📅 Date</label>
+        <input type="date" id="date" required />
+      </div>
+      <div style="grid-column: span 4; display: flex; gap: 10px;">
+        <button type="button" onclick="addTransaction(true)" style="flex:1; background-color:#ff5252;">➖ Add Expense</button>
+        <button type="button" onclick="addTransaction(false)" style="flex:1; background-color:#00e676;">➕ Add Saving</button>
+      </div>
+    </form>
+
+    <div class="summary">
+      <div>
+        <h3>💵 Income</h3>
+        <p class="income" id="income">0.00</p>
+      </div>
+      <div>
+        <h3>💸 Expense</h3>
+        <p class="expense" id="expense">0.00</p>
+      </div>
+      <div>
+        <h3>💼 Balance</h3>
+        <p id="total">0.00</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-table-body">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
